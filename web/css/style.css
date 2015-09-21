@@ -42,9 +42,15 @@ body:after{
 	padding-bottom: 20px;
 	position: relative;
 	animation: animatedBackground 10s;
+    -webkit-animation: animatedBackground 10s;
 }
 
 @keyframes animatedBackground {
+	0% { opacity: 0 ; background-position: 100% 0;}
+	2% { opacity:1; background-position: 98% 0;}
+	100% { opacity:1; background-position: 0 0; }
+}
+@-webkit-keyframes animatedBackground {
 	0% { opacity: 0 ; background-position: 100% 0;}
 	2% { opacity:1; background-position: 98% 0;}
 	100% { opacity:1; background-position: 0 0; }

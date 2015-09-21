@@ -118,7 +118,7 @@ var emirates = function(){
 					$('.thankyou').removeClass('hidden');
 				},
 				errorCallback : function () {
-					$('.notify').removeClass('hidden').text('Please try again later.');
+					$('.notify').removeClass('hidden').text('Please try again.');
 					$('#form-details button').css('margin-top', '54px');
 				}
 			});

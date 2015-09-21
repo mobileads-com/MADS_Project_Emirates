@@ -96,15 +96,14 @@ var emirates = function(){
 	
 	this.data = {};
 
-	app.contentTag.innerHTML ='<div class="background-large animated" id="widget"><div class="banner"><p>Emirates flies over 140 destinations over 6 continents</p><img src="img/logo.png" class="img-responsive" alt="Image"></div><div class="content-holder content-animated"><form id="form-location" name="form-location"><h3>Guess this beautiful Europian destination:</h3><div class="form-group"><input type="text" class="form-control" id="location" name="location" placeholder="Enter your guess" required autofocus></div><button type="submit" class="btn btn-default center-block">GO</button></form><form id="form-details" name="form-details" class="hidden"><h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful Europian destinations.</h3><div class="form-group"><input type="text" class="form-control" id="name" placeholder="Name" required></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email" required></div><div class="form-group"><p class="text-center notify hidden">Hello</p></div><button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button></form></div><div class="thankyou hidden"><h2>Thank You</h2><br><h3>For Participating. Good Luck!</h3></div></div>';
-	
+	app.contentTag.innerHTML ='<div class="background-large animated" id="widget"><div class="banner"><p>Emirates flies over 140 destinations over 6 continents</p><img src="'+ app.path +'img/logo.png" class="img-responsive" alt="Image"></div><div class="content-holder content-animated"><form id="form-location" name="form-location"><h3>Guess this beautiful European destination:</h3><div class="form-group"><input type="text" class="form-control" id="location" name="location" placeholder="Enter your guess" required autofocus></div><button type="submit" class="btn btn-default center-block">GO</button></form><form id="form-details" name="form-details" class="hidden"><h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful European destinations.</h3><div class="form-group"><input type="text" class="form-control" id="name" placeholder="Name" required></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email" required></div><div class="form-group"><p class="text-center notify hidden">Hello</p></div><button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button></form></div><div class="thankyou hidden"><h2>Thank You</h2><br><h3>For Participating. Good Luck!</h3></div></div>';
 	this.loadLeadgen = function () {
 		app.loadJs(app.path + 'js/leadgen.js', function() {
 			
 			/* Form Submission */
 			$('#form-details').leadgen({
 				email : 'EmiratesInfo119@gmail.com',
-				input : [{'fieldname':'text_1','value':'#name'},{'fieldname':'text_4','value':'#email'},{'fieldname':'text_5','value':'#location'}],
+				input : [{'fieldname':'text_1','value':'#name'}, {'fieldname':'text_4','value':'#email'}, {'fieldname':'text_5','value':'#location'}],
 				tabId : 1,
 				studioId : 2, 
 				userId : 2947,

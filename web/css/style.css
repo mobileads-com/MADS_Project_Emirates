@@ -19,14 +19,11 @@ body {
     position: relative;
 }
 
-/*.background-small {
-    width: 320px;
-    height: 50px;
-    background: url("../img/banner.jpg") no-repeat;
-    cursor: pointer;
-    background-size: cover;
-    border: 1px solid;
-}*/
+.text-center{
+	text-align: center;
+	color: #FB0303;
+	font-size: 16px;
+}
 
 .background-large {
 	width: 320px;
@@ -90,10 +87,10 @@ body {
 	position: absolute;
 	top: 0px;
 	visibility: hidden;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 10s;
-	animation: slide 0.5s forwards;
-	animation-delay: 10s;
+	-webkit-animation: banner_fade_in 0.5s forwards;
+	-webkit-animation-delay: 0.5s;
+	animation: banner_fade_in 0.5s forwards;
+	animation-delay: 0.5s;
 }
 
 .banner img{
@@ -111,14 +108,14 @@ body {
     padding-top: 15px;
 }
 
-@-webkit-keyframes fade_in {
-    from { opacity: 0;}
-    from { opacity: 1;}
+@-webkit-keyframes banner_fade_in {
+	0% { opacity: 0; visibility: visible}
+    	100% { opacity: 1; visibility: visible}
 }
 
-@keyframes fade_in {
-    from { opacity: 0; }
-    from { opacity: 1;}
+@keyframes banner_fade_in {
+    0% { opacity: 0; visibility: visible}
+    100% { opacity: 1; visibility: visible}
 }
 
 .animated .content-holder h2{

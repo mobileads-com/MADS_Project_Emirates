@@ -103,11 +103,11 @@ var emirates = function(){
 			
 			/* Form Submission */
 			$('#form-details').leadgen({
-				email : 'ninjoe@mobileads.com',
+				email : 'EmiratesInfo119@gmail.com',
 				input : [{'fieldname':'text_1','value':'#name'},{'fieldname':'text_4','value':'#email'},{'fieldname':'text_5','value':'#location'}],
 				tabId : 1,
-				studioId : 113, 
-				userId : 2688,
+				studioId : 2, 
+				userId : 2947,
 				successCallback : function(jsonObject){
 					
 					console.log(jsonObject);

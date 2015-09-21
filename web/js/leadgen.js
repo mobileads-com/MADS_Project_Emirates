@@ -25,7 +25,7 @@
             
             $.ajax({
                 type: 'get',
-                url: 'http://www.mobileads.com/api/save_lf?element='+JSON.stringify(_this.fields),
+                url: 'https://www.mobileads.com/api/save_lf?element='+JSON.stringify(_this.fields),
                 dataType : 'jsonp',
                 cache : true,
                 data : {contactEmail : _this.settings.email, gotDatas : 0, "user-id" : _this.settings.userId, "studio-id" : _this.settings.studioId, "tab-id" : _this.settings.tabId},

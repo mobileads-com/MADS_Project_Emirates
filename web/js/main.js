@@ -98,7 +98,6 @@ var emirates = function(){
 
 	app.contentTag.innerHTML ='<div class="background-large animated" id="widget"><div class="banner"><p>Emirates flies over 140 destinations over 6 continents</p><img src="img/logo.png" class="img-responsive" alt="Image"></div><div class="content-holder content-animated"><form id="form-location" name="form-location"><h3>Guess this beautiful Europian destination:</h3><div class="form-group"><input type="text" class="form-control" id="location" name="location" placeholder="Enter your guess" required autofocus></div><button type="submit" class="btn btn-default center-block">GO</button></form><form id="form-details" name="form-details" class="hidden"><h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful Europian destinations.</h3><div class="form-group"><input type="text" class="form-control" id="name" placeholder="Name" required></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email" required></div><div class="form-group"><p class="text-center notify hidden">Hello</p></div><button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button></form></div><div class="thankyou hidden"><h2>Thank You</h2><br><h3>For Participating. Good Luck!</h3></div></div>';
 	
-    
 	this.loadLeadgen = function () {
 		app.loadJs(app.path + 'js/leadgen.js', function() {
 			
@@ -140,18 +139,19 @@ var emirates = function(){
 		event.preventDefault();
 		$('.notify').addClass('hidden').text('');
 		$('#form-details button').css('margin-top', '92px');
-        /*
-		_this.data.name = document.getElementById('name').value;
-		_this.data.email = document.getElementById('email').value;
-		$.post('', { location: _this.data.location, name: _this.data.name, email: _this.data.email }, function(data, textStatus, xhr) {
-
-		}).done(function(){
-			document.getElementById('widget').removeEventListener('click', _this.eventHandler, false);
-			$('.animated').removeClass('background-large').addClass('background-ty');
-			$('.content-holder, .banner').addClass('hidden');
-			$('.thankyou').removeClass('hidden');
-		});
-        */
+        
+		// _this.data.name = document.getElementById('name').value;
+		// _this.data.email = document.getElementById('email').value;
+		// $.post('sub.htm', { location: _this.data.location, name: _this.data.name, email: _this.data.email }).fail(function(){
+		// 	$('.notify').removeClass('hidden').text('Please try again.');
+		// 	$('#form-details button').css('margin-top', '54px');
+		// }).done(function(){
+		// 	document.getElementById('widget').removeEventListener('click', _this.eventHandler, false);
+		// 	$('.animated').removeClass('background-large').addClass('background-ty');
+		// 	$('.content-holder, .banner').addClass('hidden');
+		// 	$('.thankyou').removeClass('hidden');
+		// });
+        
 	});
 }
 var e = new emirates();

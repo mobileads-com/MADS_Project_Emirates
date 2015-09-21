@@ -109,7 +109,10 @@ var emirates = function(){
                 tabId : 1,
                 studioId : 113, 
                 userId : 2688,
-                successCallback : function(){
+                successCallback : function(jsonObject){
+                    
+                    console.log(jsonObject);
+                    
                     $('.animated').removeClass('background-large').addClass('background-ty');
                     $('.content-holder, .banner').addClass('hidden');
                     $('.thankyou').removeClass('hidden');

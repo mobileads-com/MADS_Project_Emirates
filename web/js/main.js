@@ -120,15 +120,6 @@ var emirates = function() {
 				$('#cbxTerms').focus();
 				return false;
 			}
-			// $.post('sub.htm', { location: _this.data.location, name: _this.data.name, email: _this.data.email }).fail(function(){
-			// 	$('.notify').removeClass('hidden').text('Please try again.');
-			// 	$('#form-details button').css('margin-top', '0px');
-			// }).done(function(){
-			// 	document.getElementById('widget').removeEventListener('click', _this.eventHandler, false);
-			// 	$('.animated').removeClass('background-large').addClass('background-ty');
-			// 	$('.content-holder, .banner').addClass('hidden');
-			// 	$('.thankyou').removeClass('hidden');
-			// });
 		});
         
         document.getElementById('replay').addEventListener('click', function(){

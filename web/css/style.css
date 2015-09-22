@@ -38,11 +38,12 @@ body:after{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: left top;
-	padding-top:125px;
+	padding-top:115px;
 	padding-bottom: 20px;
 	position: relative;
-	animation: animatedBackground 10s;
-    -webkit-animation: animatedBackground 10s;
+	animation: animatedBackground 2s;
+    -webkit-animation: animatedBackground 2s;
+    /*10s*/
 }
 
 @keyframes animatedBackground {
@@ -77,9 +78,10 @@ body:after{
 .content-animated{
 	visibility: hidden;
 	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 10s;
+	-webkit-animation-delay: 2s;
 	animation: slide 0.5s forwards;
-	animation-delay: 10s;
+	animation-delay: 2s;
+	/*10s*/
 }
 
 @-webkit-keyframes slide {
@@ -113,8 +115,8 @@ body:after{
 .banner p{
 	color: white;
     font-family: Emirates SM;
-    width: 65%;
-    padding-left: 90px;
+    width: 58%;
+    padding-left: 66px;
     font-size: 14px;
     padding-top: 15px;
 }
@@ -150,7 +152,7 @@ input.form-control{
 form#form-location h3{
 	font-family: HelveticaNeue-Thin;
 	color: #ed1c24;
-	font-size: 14px;
+	font-size: 13.5px;
 	text-align: center;
 	padding-top: 70px;
 }
@@ -235,4 +237,26 @@ form#form-end h3 {
 .background-large .row{
 	padding-left:10px;
 	padding-right:10px;
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+p.tc {
+    margin-left: 20px;
+    color: red;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.terms-check {
+    padding-left: 40px;
+    width: 95%;
+}
+
+.checkbox-custom-label{
+	font-size: 8.3px;
+	margin-left: 40px;
+	text-indent: -30px;
 }

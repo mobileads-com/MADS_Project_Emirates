@@ -1,30 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Emirates</title>
 	<script>
-		var custTracker = function () {
+		var custTracker = function() {
 			var query_string = {};
 			var query = window.location.search.substring(1);
 			var vars = query.split("&");
-			for (var i=0;i<vars.length;i++) {
+			for (var i = 0; i < vars.length; i++) {
 				var pair = vars[i].split("=");
 				if (typeof query_string[pair[0]] === "undefined") {
 					query_string[pair[0]] = pair[1];
 				} else if (typeof query_string[pair[0]] === "string") {
-					var arr = [ query_string[pair[0]], pair[1] ];
+					var arr = [query_string[pair[0]], pair[1]];
 					query_string[pair[0]] = arr;
 				} else {
 					query_string[pair[0]].push(pair[1]);
 				}
-			} 
+			}
 			return JSON.parse(decodeURIComponent(query_string.custTracker));
-		} ();
+		}();
 	</script>
 </head>
+
 <body>
-	<div id="rma-widget"></div>
+	<div id="rma-widget">
+		<div class="background-large animated" id="widget">
+			<div class="banner">
+				<p>Emirates flies to over 140 destinations over 6 continents</p><img src="img/logo.png" class="img-responsive" alt="Image">
+			</div>
+			<div class="content-holder content-animated">
+				<form id="form-location" name="form-location" class="hidden">
+					<h3>Guess this beautiful European destination:</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" id="location" name="location" placeholder="" required autofocus>
+					</div>
+					<button type="submit" class="btn btn-default center-block">GO</button>
+				</form>
+				<form id="form-details" name="form-details" class="">
+					<h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful European destinations.</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" id="name" placeholder="Name" required>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" placeholder="Email" required>
+					</div>
+					<div class="terms-check">
+						<input id="cbxTerms" class="checkbox-custom" name="cbxTerms" type="checkbox">
+						<label for="cbxTerms" class="checkbox-custom-label text-uppercase">I have read and understand this agreement, and I accept and agree to all of its terms and conditions.</label>
+					</div>
+					<div class="form-group">
+						<p class="tc" id="terms">* Terms &amp; Conditions</p>
+					</div>
+					<div class="form-group">
+						<p class="text-center notify hidden">Hello</p>
+					</div>
+					<button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button>
+				</form>
+			</div>
+			<div class="thankyou hidden">
+				<h2>Thank You</h2>
+				<br>
+				<h3>For Participating. Good Luck!</h3>
+			</div>
+		</div>
+	</div>
 </body>
 <script src="js/main.js"></script>
+
 </html>

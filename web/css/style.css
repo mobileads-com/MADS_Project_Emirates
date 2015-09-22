@@ -176,7 +176,7 @@ form#form-details button{
 	color: #FFFFFF;;
 	font-size: 24px;
 	font-weight: bold;
-	margin-top: 92px;
+	margin-top: 60px;
 	height: 35px;
 	padding:0px;
 	background-color: #ed1c24;
@@ -190,6 +190,15 @@ form#form-details button{
 	padding-left: 18px;
 	padding-top: 20px;
 	width: 90%;
+}
+
+.checkbox {
+    width: 88%;
+    margin: auto;
+    border-color: red;
+}
+.checkbox a {
+    color: red;
 }
 
 .thankyou h2{

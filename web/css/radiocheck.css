@@ -28,7 +28,7 @@
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
-    background: rebeccapurple;
+    background: #E05B0B;;
     box-shadow: inset 0px 0px 0px 4px #fff;
 }
 

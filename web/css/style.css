@@ -13,7 +13,6 @@
 	src: url("../fonts/HelveticaNeue-Thin.otf");
 }
 
-
 body {
     margin: 0;
     position: relative;
@@ -27,7 +26,7 @@ body:after{
 .text-center{
 	text-align: center;
 	color: #FB0303;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .background-large {
@@ -41,8 +40,8 @@ body:after{
 	padding-top:115px;
 	padding-bottom: 20px;
 	position: relative;
-	animation: animatedBackground 2s;
-    -webkit-animation: animatedBackground 2s;
+	animation: animatedBackground 10s;
+    -webkit-animation: animatedBackground 10s;
     /*10s*/
 }
 
@@ -78,9 +77,9 @@ body:after{
 .content-animated{
 	visibility: hidden;
 	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
+	-webkit-animation-delay:10s;
 	animation: slide 0.5s forwards;
-	animation-delay: 2s;
+	animation-delay:10s;
 	/*10s*/
 }
 
@@ -161,7 +160,7 @@ form#form-location h3{
 form#form-location button{
 	width: 50%;
 	color: #FFFFFF;;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: bold;
 	/*margin-top: 130px;*/
 	height: 35px;
@@ -174,7 +173,7 @@ form#form-location button.btn-replay{
 }
 
 form#form-location button.btn-go{
-	    margin-top: 5px;
+	    margin-top: 13px;
 }
 
 form#form-details {
@@ -184,9 +183,9 @@ form#form-details {
 form#form-details button{
 	width: 50%;
 	color: #FFFFFF;;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: bold;
-	margin-top: 60px;
+	margin-top: 48px;
 	height: 35px;
 	padding:0px;
 	background-color: #ed1c24;
@@ -259,14 +258,15 @@ p.tc {
 }
 
 .terms-check {
-    padding-left: 40px;
+    padding-left: 42px;
     width: 95%;
 }
 
 .checkbox-custom-label{
 	font-size: 8.5px;
 	margin-left: 40px;
-	text-indent: -30px;
+	text-indent: -28px;
+	color: red;
 }
 
 .form-group {

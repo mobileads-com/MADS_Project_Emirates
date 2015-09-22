@@ -57,13 +57,15 @@ mads.prototype.loadCss = function(href) {
 var emirates = function() {
 	var _this = this;
 	var app = new mads();
+
 	app.loadCss(app.path + 'css/bootstrap.min.css');
 	app.loadCss(app.path + 'css/style.css');
 	app.loadCss(app.path + 'css/radiocheck.css');
+
 	
 	this.data = {};
 	setTimeout(function() {
-		// app.contentTag.innerHTML = '<div class="background-large animated" id="widget"><div class="banner"><p>Emirates flies to over 140 destinations over 6 continents</p><img src="img/logo.png" class="img-responsive" alt="Image"></div><div class="content-holder content-animated"><form id="form-location" name="form-location"><h3>Guess this beautiful European destination:</h3><div class="form-group"><input type="text" class="form-control" id="location" name="location" placeholder="" required autofocus></div><button type="submit" class="btn btn-default center-block">GO</button></form><form id="form-details" name="form-details" class="hidden"><h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful European destinations.</h3><div class="form-group"><input type="text" class="form-control" id="name" placeholder="Name" required></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email" required></div><div class="terms-check"><input id="cbxTerms" class="checkbox-custom" name="cbxTerms" type="checkbox"><label for="cbxTerms" class="checkbox-custom-label text-uppercase">I have read and understand this agreement, and I accept and agree to all of its terms and conditions.</label></div><div class="form-group"><p class="tc" id="terms">* Terms &amp; Conditions</p></div><div class="form-group"><p class="text-center notify hidden">Hello</p></div><button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button></form></div><div class="thankyou hidden"><h2>Thank You</h2><br><h3>For Participating. Good Luck!</h3></div></div>';
+		app.contentTag.innerHTML = '<div class="background-large animated" id="widget"><div class="banner"><p>Emirates flies to over 140 destinations over 6 continents</p><img src="img/logo.png" class="img-responsive" alt="Image"></div><div class="content-holder content-animated"><form id="form-location" name="form-location"><h3>Guess this beautiful European destination:</h3><div class="form-group"><input type="text" class="form-control" id="location" name="location" placeholder="" required autofocus></div><button type="button" class="btn btn-default center-block btn-replay" id="replay">View Again</button><button type="submit" class="btn btn-default center-block btn-go">GO</button></form><form id="form-details" name="form-details" class="hidden"><h3>Submit your entry to stand a chance to win a return ticket to one of our beautiful European destinations.</h3><div class="form-group"><input type="text" class="form-control" id="name" placeholder="Name" required></div><div class="form-group"><input type="email" class="form-control" id="email" placeholder="Email" required></div><div class="terms-check"><input id="cbxTerms" class="checkbox-custom" name="cbxTerms" type="checkbox"><label for="cbxTerms" class="checkbox-custom-label text-uppercase" required>I have read and understand this agreement, and I accept and agree to all of its terms and conditions.</label></div><div class="form-group"><p class="tc" id="terms">* Terms &amp; Conditions</p></div><div class="form-group"><p class="text-center notify hidden">Hello</p></div><button type="submit" class="btn btn-default center-block" id="btn">SUBMIT</button></form></div><div class="thankyou hidden"><h2>Thank You</h2><br><h3>For Participating. Good Luck!</h3></div></div>';
 		this.loadLeadgen = function() {
 			app.loadJs(app.path + 'js/leadgen.js', function() {
 				$('#form-details').leadgen({
@@ -89,7 +91,7 @@ var emirates = function() {
 					},
 					errorCallback: function() {
 						$('.notify').removeClass('hidden').text('Please try again.');
-						$('#form-details button').css('margin-top', '54px');
+						$('#form-details button').css('margin-top', '0px');
 					}
 				});
 			});
@@ -109,7 +111,24 @@ var emirates = function() {
 		document.getElementById('form-details').addEventListener('submit', function(event) {
 			event.preventDefault();
 			$('.notify').addClass('hidden').text('');
-			$('#form-details button').css('margin-top', '92px');
+			$('#form-details button').css('margin-top', '48px');
+			_this.data.name = document.getElementById('name').value;
+			_this.data.email = document.getElementById('email').value;
+			if(!$('#cbxTerms').is(':checked')){
+				$('.notify').removeClass('hidden').text('Please check Terms and Conditions.');
+				$('#form-details button').css('margin-top', '0px');
+				$('#cbxTerms').focus();
+				return false;
+			}
+			// $.post('sub.htm', { location: _this.data.location, name: _this.data.name, email: _this.data.email }).fail(function(){
+			// 	$('.notify').removeClass('hidden').text('Please try again.');
+			// 	$('#form-details button').css('margin-top', '0px');
+			// }).done(function(){
+			// 	document.getElementById('widget').removeEventListener('click', _this.eventHandler, false);
+			// 	$('.animated').removeClass('background-large').addClass('background-ty');
+			// 	$('.content-holder, .banner').addClass('hidden');
+			// 	$('.thankyou').removeClass('hidden');
+			// });
 		});
         
         document.getElementById('replay').addEventListener('click', function(){

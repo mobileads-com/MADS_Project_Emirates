@@ -163,10 +163,18 @@ form#form-location button{
 	color: #FFFFFF;;
 	font-size: 24px;
 	font-weight: bold;
-	margin-top: 130px;
+	/*margin-top: 130px;*/
 	height: 35px;
 	padding:0px;
 	background-color: #ed1c24;
+}
+
+form#form-location button.btn-replay{
+	margin-top: 100px;
+}
+
+form#form-location button.btn-go{
+	    margin-top: 5px;
 }
 
 form#form-details {
@@ -259,4 +267,8 @@ p.tc {
 	font-size: 8.5px;
 	margin-left: 40px;
 	text-indent: -30px;
+}
+
+.form-group {
+    margin-bottom: 5px;
 }

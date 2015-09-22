@@ -111,6 +111,15 @@ var emirates = function() {
 			$('.notify').addClass('hidden').text('');
 			$('#form-details button').css('margin-top', '92px');
 		});
+        
+        document.getElementById('replay').addEventListener('click', function(){
+            var widget = document.getElementById('widget');
+            widget.style.display = 'none';
+            setTimeout(function(){
+                widget.style.display = 'block';
+            },100);
+            
+        });
 	}, 1000);
 }
 var e = new emirates();

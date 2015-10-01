@@ -32,7 +32,10 @@ mads.prototype.tracker = function(tt, type, name, value) {
 			var img = document.createElement('img');
 			var src = this.custTracker[i].replace('{{type}}', type);
 			src = src.replace('{{tt}}', tt);
-			src = src.replace('{{value}}', value);
+            if (typeof value != 'undefined') {
+                src = src.replace('{{value}}', value);
+            }
+			
 			img.src = src + '&' + this.id;
 			img.style.display = 'none';
 			this.bodyTag.appendChild(img);

@@ -25,13 +25,14 @@ mads.prototype.linkOpener = function(url) {
 		}
 	}
 }
-mads.prototype.tracker = function(tt, type, name) {
+mads.prototype.tracker = function(tt, type, name, value) {
 	name = name || type;
 	if (typeof this.custTracker != 'undefined' && this.custTracker != '' && this.tracked.indexOf(name) == -1) {
 		for (var i = 0; i < this.custTracker.length; i++) {
 			var img = document.createElement('img');
 			var src = this.custTracker[i].replace('{{type}}', type);
 			src = src.replace('{{tt}}', tt);
+			src = src.replace('{{value}}', value);
 			img.src = src + '&' + this.id;
 			img.style.display = 'none';
 			this.bodyTag.appendChild(img);
@@ -103,7 +104,7 @@ var emirates = function() {
 		});
 		document.getElementById('form-location').addEventListener('submit', function(event) {
 			_this.data.location = $('#location').val();
-			app.tracker('E', 'go', _this.data.location);
+			app.tracker('E', 'go', 'go', _this.data.location);
 			$('#form-location').addClass('hidden');
 			$('#form-details').removeClass('hidden');
 			$('#name').focus();

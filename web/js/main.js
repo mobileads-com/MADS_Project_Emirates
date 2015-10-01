@@ -121,7 +121,7 @@ var emirates = function() {
 				$('#cbxTerms').focus();
 				return false;
 			}else{
-				$('#form-details button').text('Please wait..').prop('disabled', 'false');
+				$('#form-details button').text('Please wait..');
 				app.tracker('E', 'form');
 				$('#form-details').leadgen({
 					email: 'EmiratesInfo119@gmail.com',
@@ -145,7 +145,7 @@ var emirates = function() {
 					},
 					errorCallback: function() {
 						$('.notify').removeClass('hidden').text('Please try again.');
-						$('#form-details button').css('margin-top', '0px').text('SUBMIT').prop('disabled', 'false');
+						$('#form-details button').css('margin-top', '0px').text('SUBMIT');
 					}
 				});
 				return true;

@@ -70,7 +70,7 @@ body:after{
 .animated .content-holder{
 	background-color:rgba(255,255,255,0.8);
 	width: 87%;
-	height: 99%;
+	height: 98%;
 	margin: auto;
 }
 
@@ -107,7 +107,7 @@ body:after{
 
 .banner img{
 	margin-left: 214px;
-	margin-top: -150px;
+	margin-top: -130px;
 	width: 85px;
 }
 
@@ -117,7 +117,7 @@ body:after{
     width: 58%;
     padding-left: 66px;
     font-size: 14px;
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 @-webkit-keyframes banner_fade_in {
@@ -139,7 +139,7 @@ body:after{
 
 form#form-location {
 	color: white;
-	margin-top: -15px;
+	margin-top: -10px;
 }
 
 input.form-control{
@@ -177,7 +177,7 @@ form#form-location button.btn-go{
 }
 
 form#form-details {
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 form#form-details button{

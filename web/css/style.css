@@ -69,8 +69,8 @@ body:after{
 
 .animated .content-holder{
 	background-color:rgba(255,255,255,0.8);
-	width: 87%;
-	height: 98%;
+	width: 89%;
+	height: 96%;
 	margin: auto;
 }
 
@@ -106,18 +106,18 @@ body:after{
 }
 
 .banner img{
-	margin-left: 214px;
-	margin-top: -130px;
+	margin-left: 217px;
+	margin-top: -120px;
 	width: 85px;
 }
 
 .banner p{
 	color: white;
-    font-family: Emirates SM;
-    width: 58%;
-    padding-left: 66px;
-    font-size: 14px;
-    padding-top: 0px;
+	font-family: Emirates SM;
+	width: 58%;
+	padding-left: 66px;
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 @-webkit-keyframes banner_fade_in {
@@ -139,7 +139,7 @@ body:after{
 
 form#form-location {
 	color: white;
-	margin-top: -10px;
+	margin-top: 15px;
 }
 
 input.form-control{
@@ -173,11 +173,11 @@ form#form-location button.btn-replay{
 }
 
 form#form-location button.btn-go{
-	    margin-top: 13px;
+	    margin-top: 7px;
 }
 
 form#form-details {
-    margin-top: -10px;
+    margin-top: 15px;
 }
 
 form#form-details button{

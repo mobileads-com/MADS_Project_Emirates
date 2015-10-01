@@ -159,7 +159,6 @@ var emirates = function() {
             setTimeout(function(){
                 widget.style.display = 'block';
             },100);
-            
         });
 	}, 1000);
 }

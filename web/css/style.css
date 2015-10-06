@@ -276,3 +276,8 @@ p.tc {
 .form-group {
     margin-bottom: 5px;
 }
+
+input#cbxTerms {
+    margin-left: -20px;
+    margin-top: 10px;
+}

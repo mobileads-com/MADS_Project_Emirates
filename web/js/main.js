@@ -117,10 +117,10 @@ var emirates = function() {
 		document.getElementById('form-details').addEventListener('submit', function(event) {
 			event.preventDefault();
 			$('.notify').addClass('hidden').text('');
-			$('#form-details button').css('margin-top', '48px');
+			$('#form-details button').css('margin-top', '48px').text('Please wait..');
 			_this.data.name = document.getElementById('name').value;
 			_this.data.email = document.getElementById('email').value;
-			$('#form-details button').text('Please wait..')
+
 			if(!$('#cbxTerms').is(':checked')){
 				$('.notify').removeClass('hidden').text('Please check Terms and Conditions.');
 				$('#form-details button').css('margin-top', '0px');
